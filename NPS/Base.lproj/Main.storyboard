@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QqH-Ci-pgb">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="NPS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deosai" translatesAutoresizingMaskIntoConstraints="NO" id="E2w-Qk-mVY">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo13" translatesAutoresizingMaskIntoConstraints="NO" id="1hM-FY-V2h">
+                                <rect key="frame" x="65" y="153" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="6Ud-n7-03g"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Sbu-N7-OPP"/>
+                                    <constraint firstAttribute="height" constant="240" id="fz5-ce-DeO"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="hUC-ak-cl6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E2w-Qk-mVY" secondAttribute="trailing" id="J5O-pp-Vm3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E2w-Qk-mVY" secondAttribute="bottom" id="oXN-pU-xC6"/>
+                            <constraint firstItem="E2w-Qk-mVY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s4w-3t-MVA"/>
+                            <constraint firstItem="E2w-Qk-mVY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="z6I-Oc-DBe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="RjT-Q6-GIh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+        </scene>
+        <!--Parks-->
+        <scene sceneID="VMB-oe-KXx">
+            <objects>
+                <viewController id="2lj-y8-gux" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ri-ay-B6O">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Wm-Ay-iCc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Parks" image="tree" catalog="system" selectedImage="tree.fill" id="Bfl-tZ-xsz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g15-dU-Jwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1779.3893129770991" y="5.6338028169014089"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wZQ-Ki-G4F">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QqH-Ci-pgb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jV9-TM-K2a">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="yt8-fv-LtW"/>
+                        <segue destination="2lj-y8-gux" kind="relationship" relationship="viewControllers" id="09G-eB-48I"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaJ-gi-QcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="deosai" width="1980" height="1320"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="logo13" width="408" height="201"/>
+        <image name="tree" catalog="system" width="128" height="118"/>
+        <image name="tree.fill" catalog="system" width="128" height="118"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
